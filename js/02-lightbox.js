@@ -10,10 +10,10 @@ refs.galereyList.addEventListener('click', onGaleryListClick);
 
 function createImageCards(galleryItems) {
     return galleryItems.map(({original, preview, description}) => {
-    return `<a class="gallery__item" href="${original}">
+    return `<li><a class="gallery__item" href="${original}">
                 <img class="gallery__image" src="${preview}" 
                 alt="${description}" />
-            </a>`
+            </a></li>`
     }).join('');
 };
 const lightbox = new SimpleLightbox('.gallery a', {
@@ -27,3 +27,4 @@ function onGaleryListClick(event) {
         return;
     };
 };
+console.log(refs.galereyList)
